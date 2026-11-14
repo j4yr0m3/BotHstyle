@@ -10,6 +10,12 @@ import threading
 import logging
 import random
 from datetime import datetime
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "BotStyle est actif"
 
 def get_kraken_signature(urlpath, data, secret):
     postdata = urllib.parse.urlencode(data)
@@ -18,6 +24,7 @@ def get_kraken_signature(urlpath, data, secret):
     mac = hmac.new(base64.b64decode(secret), message, hashlib.sha512)
     sigdigest = base64.b64encode(mac.digest())
     return sigdigest.decode()
+    return "BotHstyle Est Actif"
 
 def query_kraken_private(api_key, api_secret, urlpath, data=None):
     if data is None:
