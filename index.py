@@ -10,12 +10,12 @@ import threading
 import logging
 import random
 from datetime import datetime
-from flask import Flask
+from flask import Flask, jsonify
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "BotStyle est actif"
+    return jsonify({"status": "actif"})
 
 def get_kraken_signature(urlpath, data, secret):
     postdata = urllib.parse.urlencode(data)
