@@ -1,0 +1,57 @@
+{
+  "global_settings": {
+    "max_open_positions": 5,
+    "take_profit_default_pct": 2.5,
+    "stop_loss_default_pct": 1.2
+  },
+  "markets": {
+    "forex": {
+      "enabled": true,
+      "pairs": ["EUR/USD", "GBP/USD", "USD/JPY"],
+      "timeframe": "1h",
+      "strategy_params": {
+        "fast_period": 10,
+        "slow_period": 30,
+        "rsi_period": 14,
+        "overbought": 70,
+        "oversold": 30,
+        "risk_per_trade": 0.01
+      }
+    },
+    "crypto": {
+      "enabled": true,
+      "symbols": ["BTC/USDT", "ETH/USDT", "SOL/USDT"],
+      "timeframe": "4h",
+      "strategy_params": {
+        "fast_period": 9,
+        "slow_period": 21,
+        "rsi_period": 14,
+        "overbought": 75,
+        "oversold": 25,
+        "risk_per_trade": 0.02
+      }
+    },
+    "gold": {
+      "enabled": true,
+      "symbols": ["XAU/USD"],
+      "timeframe": "1h",
+      "strategy_params": {
+        "window": 14,
+        "risk_per_trade": 0.015
+      }
+    },
+    "stocks": {
+      "enabled": false,
+      "symbols": ["AAPL", "NVDA", "MSFT"],
+      "timeframe": "1d",
+      "strategy_params": {
+        "fast_period": 20,
+        "slow_period": 50,
+        "rsi_period": 14,
+        "overbought": 70,
+        "oversold": 30,
+        "risk_per_trade": 0.015
+      }
+    }
+  }
+}
